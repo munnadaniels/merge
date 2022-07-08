@@ -55,7 +55,7 @@ async def cb_handler(c: Client, cb: CallbackQuery):
 			return
 		UPLOAD_TO_DRIVE.update({f'{cb.from_user.id}':True})
 		await cb.message.edit(
-			text="Okay I'll upload to drive\nDo you want to rename? Default file name is **[@yashoswalyo]_merged.mkv**",
+			text="Okay I'll upload to drive\nDo you want to rename? Default file name is **[@Trooporiginals]_merged.mkv**",
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
@@ -87,7 +87,7 @@ async def cb_handler(c: Client, cb: CallbackQuery):
 	elif cb.data == 'document':
 		UPLOAD_AS_DOC.update({f'{cb.from_user.id}':True})
 		await cb.message.edit(
-			text='Do you want to rename? Default file name is **[@yashoswalyo]_merged.mkv**',
+			text='Do you want to rename? Default file name is **[@Trooporiginals]_merged.mkv**',
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
@@ -103,7 +103,7 @@ async def cb_handler(c: Client, cb: CallbackQuery):
 	elif cb.data == 'video':
 		UPLOAD_AS_DOC.update({f'{cb.from_user.id}':False})
 		await cb.message.edit(
-			text='Do you want to rename? Default file name is **[@yashoswalyo]_merged.mkv**',
+			text='Do you want to rename? Default file name is **[@Trooporiginals]_merged.mkv**',
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
@@ -119,7 +119,7 @@ async def cb_handler(c: Client, cb: CallbackQuery):
 	elif cb.data == 'documentS':
 		UPLOAD_AS_DOC.update({f'{cb.from_user.id}':True})
 		await cb.message.edit(
-			text='Do you want to rename? Default file name is **[@yashoswalyo]_softmuxed_video.mkv**',
+			text='Do you want to rename? Default file name is **[@Trooporiginals]_merged.mkv**',
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
@@ -135,7 +135,7 @@ async def cb_handler(c: Client, cb: CallbackQuery):
 	elif cb.data == 'videoS':
 		UPLOAD_AS_DOC.update({f'{cb.from_user.id}':False})
 		await cb.message.edit(
-			text=f"Do you want to rename? Default file name is **[@yashoswalyo]_softmuxed_video.mkv**",
+			text=f"Do you want to rename? Default file name is **[@Trooporiginals]_merged.mkv**",
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
@@ -164,7 +164,7 @@ async def cb_handler(c: Client, cb: CallbackQuery):
 	elif cb.data.startswith('rename_'):
 		if 'YES' in cb.data:
 			await cb.message.edit(
-				'Current filename: **[@yashoswalyo]_merged.mkv**\n\nSend me new file name without extension: You have 1 minute',
+				'Current filename: **[@Trooporiginals]_merged.mkv**\n\nSend me new file name without extension: You have 1 minute',
 				parse_mode='markdown'
 			)
 			res: Message = await c.listen( cb.message.chat.id,filters=filters.text, timeout=60 )
@@ -179,7 +179,7 @@ async def cb_handler(c: Client, cb: CallbackQuery):
 	elif cb.data.startswith('renameS_'):
 		if 'YES' in cb.data:
 			await cb.message.edit(
-				'Current filename: **[@yashoswalyo]_softmuxed_video.mkv**\n\nSend me new file name without extension: You have 1 minute ',
+				'Current filename: **[@Trooporiginals]_merged.mkv**\n\nSend me new file name without extension: You have 1 minute ',
 				parse_mode='markdown'
 			)
 			res: Message = await c.listen( cb.message.chat.id,filters=filters.text, timeout=300 )
@@ -188,7 +188,7 @@ async def cb_handler(c: Client, cb: CallbackQuery):
 				await res.delete(True)
 				await mergeSub(c,cb,new_file_name)
 		if 'NO' in cb.data:
-			await mergeSub(c,cb,new_file_name = f"./downloads/{str(cb.from_user.id)}/[@yashoswalyo]_softmuxed_video.mkv")
+			await mergeSub(c,cb,new_file_name = f"./downloads/{str(cb.from_user.id)}/[@Trooporiginals]_merged.mkv")
 
 	elif cb.data == 'cancel':
 		await delete_all(root=f"downloads/{cb.from_user.id}/")
