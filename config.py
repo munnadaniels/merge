@@ -7,6 +7,6 @@ class Config(object):
 	OWNER = int(os.environ.get('OWNER','1807485738'))
 	OWNER_USERNAME = os.getenv('OWNER_USERNAME','vanajakshi69')
 	PASSWORD = os.getenv('PASSWORD','thatha')
-	DATABASE_URL=os.environ.get("DATABASE_URL","")
+	DATABASE_URL=os.environ.get("DATABASE_URL","mongodb+srv://vanajakshi:pravalika@cluster0.t2dgo.mongodb.net/?retryWrites=true&w=majority")
 	FLAG = int(os.getenv('FLAG',1))		# Dont Change this(unfinished feature!!) or else bot will stop working
 	LOGCHANNEL = os.getenv('LOGCHANNEL') or None # Add channel id with -100 /\or/\ channel user name without @
