@@ -41,7 +41,7 @@
 			"url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
 		},
 		{
-			"url": "https://rclone.org/install.sh"
+			"url": "https://github.com/amivin/rclone-heroku"
 		},
 		{
 			"url": "heroku/python"
