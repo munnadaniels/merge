@@ -2,7 +2,7 @@ import os
 
 class Config(object):
 	API_HASH = os.getenv('API_HASH','97abf9b730e7fae3d7e9c5dd240885c1')
-	BOT_TOKEN = os.getenv('BOT_TOKEN','5100078702:AAHveHDTRCubIg-ALCm93QDKeVANF1V2BWs')
+	BOT_TOKEN = os.getenv('BOT_TOKEN','2037580629:AAHY8Fcm079pRISnsQLvxZvLZ08rNx5yjcg')
 	API_ID = int(os.getenv('API_ID','7963542'))
 	OWNER = int(os.environ.get('OWNER','1807485738'))
 	OWNER_USERNAME = os.getenv('OWNER_USERNAME','vanajakshi69')
