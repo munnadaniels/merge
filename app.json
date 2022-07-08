@@ -9,7 +9,7 @@
 	],
 	"repository": "https://github.com/yashoswalyo/MERGE-BOT",
 	"website": "https://telegram.dog/yashoswalyo",
-	"stack": "heroku-20",
+	"stack": "heroku-22",
 	"env": {
 		"API_ID": {
 			"description": "Get this value from my.telegram.org "
@@ -41,7 +41,7 @@
 			"url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
 		},
 		{
-			"url": "https://github.com/amivin/rclone-heroku"
+			"url": "https://rclone.org/install.sh"
 		},
 		{
 			"url": "heroku/python"
